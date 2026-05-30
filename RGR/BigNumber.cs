@@ -165,10 +165,10 @@ namespace RGR
                 string fracPart = productStr.Substring(productStr.Length - decimalPlaces).TrimEnd('0');
 
                 if (string.IsNullOrEmpty(intPart)) intPart = "0";
-                return new BigNumber(intPart, fracPart, a.IsNegative != b.IsNegative);
+                return new BigNumber(BigInteger.Parse(intPart), fracPart, a.IsNegative != b.IsNegative);
             }
 
-            return new BigNumber(productStr, "", a.IsNegative != b.IsNegative);
+            return new BigNumber(BigInteger.Parse(productStr), "", a.IsNegative != b.IsNegative);
         }
 
      
