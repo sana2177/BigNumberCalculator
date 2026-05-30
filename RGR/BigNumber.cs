@@ -171,7 +171,7 @@ namespace RGR
             return new BigNumber(productStr, "", a.IsNegative != b.IsNegative);
         }
 
-        // Ділення (спрощена версія)
+     
         public static BigNumber Divide(BigNumber a, BigNumber b, int precision = 50)
         {
             if (b.IntegerPart == 0 && string.IsNullOrEmpty(b.FractionalPart))
